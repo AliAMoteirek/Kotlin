@@ -3,7 +3,7 @@ package Lektion3.Övningsuppgift.Övningsuppgift7
 import java.util.concurrent.atomic.DoubleAccumulator
 
 fun sumOfAList(list: List<Int>): Int {
-    fun sum(index: Int, accumulator: Int = 0): Int {
+    tailrec fun sum(index: Int, accumulator: Int = 0): Int {
         return if (index < 0) accumulator
         else sum(index -1, accumulator + list[index])
     }
